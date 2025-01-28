@@ -1,0 +1,21 @@
+{
+  "name": "static-site-generator",
+  "version": "1.0.0",
+  "description": "A simple static site generator using markdown",
+  "main": "scripts/build.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "marked": "^9.1.5",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^11.1.1",
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "rimraf": "^5.0.5"
+  }
+} 
