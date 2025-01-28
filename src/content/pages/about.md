@@ -1,9 +1,9 @@
 ---
-title: Welcome to My Website
+title: About
 template: base
 ---
 
-# Welcome to My Website
+# About this site 
 
 This is a simple static website built with markdown and Node.js. Here you'll find:
 
@@ -11,11 +11,3 @@ This is a simple static website built with markdown and Node.js. Here you'll fin
 - Information about me and my work
 - Frequently asked questions
 - Ways to get in touch
-
-## Latest Posts
-
-[Coming soon...]
-
-## Get in Touch
-
-Feel free to [contact me](contact.html) with any questions or opportunities. 
