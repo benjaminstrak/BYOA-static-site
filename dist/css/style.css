@@ -1,6 +1,8 @@
 :root {
-    --primary-color: #333;
+    --primary-color: #000;
+    --text-color: #333;
     --background-color: #fff;
+    --accent-color: #0066FF;
 }
 
 body {
@@ -8,25 +10,166 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: var(--primary-color);
+    color: var(--text-color);
     background-color: var(--background-color);
 }
 
+/* Header & Navigation */
 header {
-    background-color: #f8f9fa;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
 }
 
 nav {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 nav a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-dark {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn-dark {
+    background-color: #000;
+    color: white;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Features Section */
+.features {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #fff, #f5f5f5);
+}
+
+.features h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 2rem;
+    border-radius: 16px;
+    color: white;
+    text-align: left;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.gradient-1 {
+    background: linear-gradient(45deg, #FF6B6B, #FFE66D);
+}
+
+.gradient-2 {
+    background: linear-gradient(45deg, #4E65FF, #92EFFD);
+}
+
+.gradient-3 {
+    background: linear-gradient(45deg, #FF8E53, #FE6B8B);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .hero {
+        padding: 3rem 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
 }
 
 main {
@@ -39,4 +182,112 @@ footer {
     text-align: center;
     padding: 2rem;
     background-color: #f8f9fa;
+}
+
+/* Add these to your existing CSS */
+
+.blog-post {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.post-header {
+    margin-bottom: 3rem;
+}
+
+.post-date {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.blog-index {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.blog-preview {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-preview h2 {
+    margin-bottom: 1rem;
+}
+
+.blog-preview h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-meta {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* ConvertKit Form Styles */
+.convertkit-form {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: linear-gradient(to right, #f8f9fa, #fff);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.convertkit-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.convertkit-form p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.formkit-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formkit-fields {
+    display: flex;
+    gap: 1rem;
+}
+
+.formkit-field {
+    flex: 1;
+}
+
+.formkit-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.formkit-submit {
+    padding: 0.75rem 1.5rem !important;
+    background-color: var(--accent-color) !important;
+    border: none;
+    border-radius: 8px !important;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formkit-alert {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    color: #f44336;
 } 

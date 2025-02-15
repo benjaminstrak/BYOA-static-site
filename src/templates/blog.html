@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | Llama Life Blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">Llama Land</a></div>
+            <div class="nav-links">
+                <a href="../blog.html">Llama Life Blog</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../adopt.html" class="btn-dark">Meet a Llama</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="blog-post">
+        <article>
+            <div class="post-header">
+                <p class="post-date">{{date}}</p>
+                <h1>{{title}}</h1>
+            </div>
+            <div class="post-content">
+                {{content}}
+            </div>
+            {{convertkit}}
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Llama Land. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
